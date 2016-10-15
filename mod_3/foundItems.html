@@ -1,0 +1,9 @@
+  <div  class="container">
+    <ul>
+        <li ng-repeat="item in directiveCtrl.found">{{item.name}} , {{item.short_name}} , {{item.description}}
+        <button type="button" name="button" ng-click="directiveCtrl.onRemove({'index':$index})">Don't want this one!</button>
+        </li>
+    </ul>
+    <br><br>
+    <div ng-if="directiveCtrl.found.length===0"> Nothing found </div>
+  </div>
