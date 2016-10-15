@@ -11,7 +11,8 @@
     </script>
   </head>
 <body ng-app="NarrowItDownApp">
-   <div class="container" ng-controller="NarrowItDownController as ndCtrl">
+  <div  ng-controller="NarrowItDownController as ndCtrl">
+   <div class="container">
     <h1>Narrow Down Your Chinese Menu Choice</h1>
 
     <div class="form-group">
@@ -21,8 +22,8 @@
       <button class="btn btn-primary" ng-click="ndCtrl.narrowDown()">Narrow It Down For Me!</button>
     </div>
 
-<found-items found="ndCtrl.found" on-remove="ndCtrl.removeItem(index)"></found-items>
   </div>
-
+  <found-items found="ndCtrl.found" on-remove="ndCtrl.removeItem(index)"></found-items>
+</div>
 </body>
 </html>
