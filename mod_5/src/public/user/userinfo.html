@@ -1,0 +1,20 @@
+<div class="container">
+<div ng-if="userInfoCtrl.loggedIn">
+  Name : <span>{{userInfoCtrl.userInfo.firstName}}</span>
+  <span>{{userInfoCtrl.userInfo.lastName}}</span>
+  <br>
+  Email: <span>{{userInfoCtrl.userInfo.email}}</span>
+  <br>
+  Phonenumber:  <span>{{userInfoCtrl.userInfo.phonenumber}}</span>
+<br>
+  Favourite Menu Item:
+  <br>
+  <menu-item menu-item="userInfoCtrl.userInfo.favouriteDetail">
+  </menu-item>
+
+</div>
+<div class="error" ng-if="!userInfoCtrl.loggedIn">
+  Not Signed Up Yet. <a ui-sref='public.signup'>Sign up</a>
+</div>
+
+</div>
